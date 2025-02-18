@@ -14,6 +14,7 @@ export class AuthController {
       return res.status(error.statusCode).json({ error: error.message });
     }
 
+
     console.log(`${ error }`);
     return res.status(500).json({ error: 'Internal server error' })
   } 
@@ -38,6 +39,11 @@ export class AuthController {
   }
 
   validateEmail = (req: Request, res: Response) => {
-    res.json('validateEmail');
+    
+    const {token} = req.params;
+
+    this.authService.validateEmail(token)
+    .then(() => res.json('Email validated'))
+    .catch(error => this.handleError(error, res));
   }
 }
