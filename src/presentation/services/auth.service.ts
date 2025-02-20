@@ -75,8 +75,8 @@ export class AuthService {
     
 
     const html = `
-        <h1>Validate your email mamabciho</h1>
-        <p>Haz click en el link si no eres gay</p>
+        <h1>Validate your email</h1>
+        <p>Haz click en el link para validarte</p>
         <a href="${link}">Validate your email ${email}</a>
     `;
 
