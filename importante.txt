@@ -1,0 +1,3 @@
+No lee la ruta para obtener las imagenes
+
+tengo el error del mimetype
